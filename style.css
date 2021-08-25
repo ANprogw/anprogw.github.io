@@ -1,0 +1,455 @@
+:root{
+    --main-black: 13, 9, 7;
+    --main-white: 242, 246, 248;
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+    font-family: 'Work Sans', sans-serif;
+    font-style: italic;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(var(--main-white));
+}
+
+::-webkit-scrollbar-thumb {
+    height: 15px;
+    background-color: rgb(var(--main-black));
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(var(--main-white));
+    overflow-y: hidden;
+
+    animation: scrollon 1ms 2.5s forwards;
+}
+
+h1{
+    font-size: 7em;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2{
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3{
+    font-size: 2.2em;
+    font-weight: 300;
+}
+
+p{
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+#navbar{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    padding: 65px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 700;
+    z-index: 100;
+    background: linear-gradient(rgb(var(--main-white)), rgba(0, 0, 0, 0));
+}
+
+#navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+#navbar li{
+    margin: 0 10px;
+    font-size: 2rem;
+    display: inline;
+}
+
+#navbar a{
+    display: inline-block; /* to make hover work */
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 5px solid rgba(0, 0, 0, 0);
+    transition: all 0.7s;
+}
+
+#navbar a:hover{
+    border-color: rgb(var(--main-black));
+}
+
+section{
+    box-sizing: border-box;
+}
+
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms;
+}
+
+.welcome-anim{
+    color: rgba(0, 0, 0, 0);
+    animation: appearance 3s forwards;
+}
+
+#welcome-1{
+    animation-delay: 0.5s;
+}
+
+#welcome-2{
+    animation-delay: 1.0s;
+}
+
+#welcome-3{
+    animation-delay: 1.5s;
+}
+
+#about{
+    width: 520px;
+    margin-top: -200px;
+    margin-left: 50%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    transition: all 500ms;
+}
+
+.strong{
+    font-weight: 500;
+}
+
+#projects{
+    width: 100%;
+    height: fit-content;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tile{
+    width: 600px;
+    height: fit-content;
+    margin: 0;
+    padding: 20px;
+    border: 10px solid rgba(0, 0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 50; /* to prevent overlapping by parent, make hover work as it should */ 
+    transition: all 500ms;
+}
+
+#project-1{
+    margin-left: 12.5%;
+}
+
+#project-2{
+    margin-left: 57.5%;
+    margin-top: -100px;
+}
+
+#project-3{
+    margin-left: 7.5%;
+}
+
+#project-4{
+    margin-left: 52.5%;
+    margin-top: -100px;
+}
+
+.project-tile ul{
+    margin: 10px 0;
+    padding: 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    list-style-type: none;
+}
+
+.project-tile ul li{
+    display: inline;
+}
+
+.project-tile p{
+    margin: 0;
+    text-align: justify;
+}
+
+.project-tile:hover{     
+    border-color: rgb(var(--main-black));
+}
+
+#contact{
+    width: fit-content;
+    margin: 200px 0 400px 30%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(var(--main-white));
+    filter: invert(100%);
+}
+
+#contact h2{
+    font-size: 3.5em;
+    color: rgb(var(--main-black));
+}
+
+#contact p{
+    margin: 5px 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#contact a{
+    color: rgb(var(--main-black));
+    text-decoration: none;
+}
+
+#navbar a, #about p, .project-tile *{
+    color: rgba(0, 0, 0, 0);
+    animation: appearance 3s 2s forwards;
+}
+
+@keyframes scrollon {  
+
+    to{
+        overflow-y: overlay;
+    }
+}
+
+@keyframes appearance{
+
+    to{
+        color: rgb(var(--main-black));
+    }
+}
+
+@media (max-width: 1850px){
+
+    #project-1{
+        margin-left: 10%;
+    }
+    
+    #project-3{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1725px){
+
+    #project-2{
+        margin-left: 56%;
+    }
+    
+    #project-4{
+        margin-left: 51%;
+    } 
+}
+
+@media (max-width: 1650px) {
+
+    #project-1{
+        margin-left: 7.5%;
+    }
+    
+    #project-3{
+        margin-left: 2.5%;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .project-tile{
+        margin: 0 0 50px 15% !important;
+    }
+
+    #contact{
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 1300px){
+
+    :root{
+        font-size: 14px;
+    }
+
+    #about{
+        width: 450px;
+        margin-top: -185px;
+    }
+
+    #projects{
+        padding-top: 80px;
+    }
+
+    .project-tile{
+        width: 530px;
+        margin-left: 10% !important;
+    }
+
+    #contact{
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 1000px){
+
+    #about{
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 900px){
+
+    :root{
+        font-size: 12px;
+    }
+
+    #navbar{
+        padding: 50px 35px 35px;
+    }
+
+    #navbar a{
+        border-width: 4px;
+        padding: 7px 14px;
+    }
+
+    #about{
+        width: 380px;
+        margin-top: -140px;
+        padding-top: 70px;
+    }
+
+    #projects{
+        padding-top: 60px;
+    }
+
+    .project-tile{
+        width: 450px;
+        border-width: 7px;
+        margin-bottom: 40px !important;
+    }
+
+    #contact{
+        margin-top: 125px;
+        margin-bottom: 350px;
+    }
+}
+
+@media (max-width: 750px){
+
+    #welcome-section{
+        font-size: 10px;
+    }
+
+    #about{
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .project-tile{
+        margin-left: 5% !important;
+    } 
+
+    #contact{
+        margin-left: auto;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 600px){
+
+    :root{
+        font-size: 10px;
+    }
+
+    #welcome-section{
+        font-size: 8px;
+    }
+
+    #welcome-1, #welcome-2{
+        display: flex;
+        justify-content: center;
+    }
+
+    #navbar{
+        padding: 30px 20px 20px;
+    }
+
+    #navbar a{
+        border-width: 3px;
+    }
+
+    #about{
+        width: 310px;
+        margin-top: -105px;
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    #projects{ 
+        padding-top: 30px;
+    }
+
+    .project-tile{
+        width: 380px;
+        margin-left: 5% !important;
+        margin-bottom: 30px !important;
+        padding: 15px;
+        border-width: 5px;
+    }
+
+    #contact{
+        margin-top: 100px;
+        margin-bottom: 300px;
+    }
+}
+
+@media (max-width: 475px){
+
+    #navbar li{
+        margin: 0 5px;
+    }
+
+    #navbar a{
+        padding: 4px 8px;
+    }
+
+    #about{
+        width: 250px;
+        margin-right: 20px;
+    }
+
+    .project-tile{
+        width: 70%;
+    }
+
+    #contact{
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 350px) {
+    
+    #navbar li{
+        font-size: 1.7rem;
+    }
+}
