@@ -137,7 +137,7 @@ section{
 #projects{
     width: 100%;
     height: fit-content;
-    padding-top: 100px;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
 }
@@ -148,12 +148,43 @@ section{
     margin: 0;
     padding: 20px;
     border: 10px solid rgba(0, 0, 0, 0);
-    text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     z-index: 50; /* to prevent overlapping by parent, make hover work as it should */ 
     transition: all 500ms;
+}
+
+.project-tile:hover{     
+    border-color: rgb(var(--main-black));
+}
+
+.project-tile a{
+    text-decoration: none;
+}
+
+.project-tile p{
+    margin: 0;
+    text-align: justify;
+}
+
+.project-tile > a ul{
+    margin: 10px 0;
+    padding: 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    list-style-type: none;
+}
+
+.project-tile > a ul li{
+    display: inline;
+}
+
+.project-tile > p{
+    margin-top: 5px;
+}
+
+.code-link{
+    float: right;
 }
 
 #project-1{
@@ -172,27 +203,6 @@ section{
 #project-4{
     margin-left: 52.5%;
     margin-top: -100px;
-}
-
-.project-tile ul{
-    margin: 10px 0;
-    padding: 0;
-    font-size: 1.4em;
-    font-weight: 400;
-    list-style-type: none;
-}
-
-.project-tile ul li{
-    display: inline;
-}
-
-.project-tile p{
-    margin: 0;
-    text-align: justify;
-}
-
-.project-tile:hover{     
-    border-color: rgb(var(--main-black));
 }
 
 #contact{
