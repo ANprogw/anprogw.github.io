@@ -177,6 +177,7 @@ section{
 
 .project-tile > a ul li{
     display: inline;
+    margin-right: 5px;
 }
 
 .project-tile > p{
